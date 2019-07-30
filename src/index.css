@@ -1,0 +1,159 @@
+body {
+  font-family: arial;
+  font-size: 12px;
+}
+
+input {
+  box-shadow: none;
+  border-style: solid;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 10px;
+  float: right;
+}
+
+.todo-container .todo-input {
+  display: inline-block;
+  margin-bottom: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0;
+  width: 80%;
+}
+
+form .submit-todo-btn {
+  background-color: #00e600;
+  color: white;
+  display: block;
+  cursor: pointer;
+  width: 20%;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0;
+}
+
+.todo-container {
+  padding: 20px;
+  background-color: beige;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.todo-item:focus {
+  outline: 1px solid gray;
+}
+
+.todo-item,
+.todo-input {
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff
+}
+
+.todo-item-wrapper .todo-item {
+  margin: 10px 0;
+  width: 80%;
+  display: inline-block;
+}
+
+.completed-todo {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item-wrapper {
+  position: relative;
+  padding-left: 38px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+.completed-checkbox {
+  width: 25px;
+  height: 25px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.completed-checkbox.completed {
+  border: 1px solid green;
+}
+
+.completed-checkbox .checkmark {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.completed-checkbox .checkmark:after {
+  left: 9px;
+  content: '';
+  width: 5px;
+  height: 11px;
+  border: solid green;
+  border-width: 0px 2px 2px 0;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+}
+.completed-checkbox .checkmark:after {
+  display: none;
+}
+.completed-checkbox input:checked ~ .checkmark:after {
+  content: '';
+  display: block;
+}
+
+.no-todos-warning {
+  color: gray;
+}
+
+.tracker {
+  margin-top: 40px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 10px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.remove-btn {
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  background-color: lightCoral;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.todo-item-wrapper input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  height: 0;
+  width: 0;
+  top: 0;
+}
